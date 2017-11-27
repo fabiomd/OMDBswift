@@ -17,6 +17,12 @@
 		5B12BC7E1F840D7300908D3A /* OMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12BC7D1F840D7300908D3A /* OMDBTests.swift */; };
 		5B12BC891F840D7400908D3A /* OMDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12BC881F840D7400908D3A /* OMDBUITests.swift */; };
 		90B0EF20ADEABFB30671BE9D /* Pods_OMDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF9881595AF392A8A7C82B /* Pods_OMDBTests.framework */; };
+		E53C32271FC87F870086E3EE /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53C32261FC87F870086E3EE /* MovieService.swift */; };
+		E5432DC31FC453E600F4A9CC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5432DC21FC453E600F4A9CC /* Movie.swift */; };
+		E58F144F1FCC768000AA0D6A /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = E58F144E1FCC768000AA0D6A /* movies.json */; };
+		E58F14571FCC7B9C00AA0D6A /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58F14561FCC7B9C00AA0D6A /* MovieResults.swift */; };
+		E58F145B1FCC7BFA00AA0D6A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58F145A1FCC7BFA00AA0D6A /* Movie.swift */; };
+		E58F145D1FCC7C1D00AA0D6A /* VideoResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58F145C1FCC7C1D00AA0D6A /* VideoResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		84FF9881595AF392A8A7C82B /* Pods_OMDBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1285432E61E26EDB72BDC1 /* Pods-OMDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMDBTests/Pods-OMDBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D69A44AF8B0CEE959B0AAD7A /* Pods_OMDBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53C32261FC87F870086E3EE /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieService.swift; path = OMDB/Entitys/MovieService.swift; sourceTree = SOURCE_ROOT; };
+		E5432DC21FC453E600F4A9CC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E58F144E1FCC768000AA0D6A /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		E58F14561FCC7B9C00AA0D6A /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieResults.swift; path = OMDB/Services/Mocks/MovieResults.swift; sourceTree = SOURCE_ROOT; };
+		E58F145A1FCC7BFA00AA0D6A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = OMDB/Services/Mocks/Movie.swift; sourceTree = SOURCE_ROOT; };
+		E58F145C1FCC7C1D00AA0D6A /* VideoResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoResults.swift; path = OMDB/Services/Mocks/VideoResults.swift; sourceTree = SOURCE_ROOT; };
 		EBD4DFDE54E015BFD6E2881C /* Pods-OMDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDBTests/Pods-OMDBTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED7AD6A587CB4841FA06E900 /* Pods-OMDBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDBUITests/Pods-OMDBUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +136,10 @@
 		5B12BC671F840D7100908D3A /* OMDB */ = {
 			isa = PBXGroup;
 			children = (
+				E5432DC11FC453AB00F4A9CC /* Routings */,
+				E5432DC01FC4539D00F4A9CC /* Entitys */,
+				E5432DBF1FC4538400F4A9CC /* Presenters */,
+				E5432DBE1FC4536B00F4A9CC /* Interactors */,
 				5B12BC9C1F840F7B00908D3A /* Application */,
 				5B12BC9B1F840F6F00908D3A /* Resources */,
 				5B12BC9A1F840F6500908D3A /* Views */,
@@ -170,6 +186,9 @@
 		5B12BC981F840F5300908D3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E58F14561FCC7B9C00AA0D6A /* MovieResults.swift */,
+				E58F145A1FCC7BFA00AA0D6A /* Movie.swift */,
+				E58F145C1FCC7C1D00AA0D6A /* VideoResults.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +196,8 @@
 		5B12BC991F840F5A00908D3A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E58F144D1FCC764500AA0D6A /* Mocks */,
+				E53C32261FC87F870086E3EE /* MovieService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -219,6 +240,43 @@
 				ED7AD6A587CB4841FA06E900 /* Pods-OMDBUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5432DBE1FC4536B00F4A9CC /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		E5432DBF1FC4538400F4A9CC /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		E5432DC01FC4539D00F4A9CC /* Entitys */ = {
+			isa = PBXGroup;
+			children = (
+				E5432DC21FC453E600F4A9CC /* Movie.swift */,
+			);
+			path = Entitys;
+			sourceTree = "<group>";
+		};
+		E5432DC11FC453AB00F4A9CC /* Routings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routings;
+			sourceTree = "<group>";
+		};
+		E58F144D1FCC764500AA0D6A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E58F144E1FCC768000AA0D6A /* movies.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +397,7 @@
 			files = (
 				5B12BC731F840D7200908D3A /* LaunchScreen.storyboard in Resources */,
 				5B12BC701F840D7200908D3A /* Assets.xcassets in Resources */,
+				E58F144F1FCC768000AA0D6A /* movies.json in Resources */,
 				5B12BC6E1F840D7200908D3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,13 +440,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDBUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		888D3DA2CB93A3DCEBF0F591 /* [CP] Copy Pods Resources */ = {
@@ -441,13 +503,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDB-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF71A16F9E0B97A8C6C39222 /* [CP] Embed Pods Frameworks */ = {
@@ -456,9 +521,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OMDB/Pods-OMDB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,13 +545,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDBTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FADE0790952F501763990C6E /* [CP] Copy Pods Resources */ = {
@@ -503,7 +580,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B12BC6B1F840D7200908D3A /* ViewController.swift in Sources */,
+				E58F145D1FCC7C1D00AA0D6A /* VideoResults.swift in Sources */,
 				5B12BC691F840D7100908D3A /* AppDelegate.swift in Sources */,
+				E53C32271FC87F870086E3EE /* MovieService.swift in Sources */,
+				E5432DC31FC453E600F4A9CC /* Movie.swift in Sources */,
+				E58F145B1FCC7BFA00AA0D6A /* Movie.swift in Sources */,
+				E58F14571FCC7B9C00AA0D6A /* MovieResults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,8 +753,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BD3S4TTCB;
-				INFOPLIST_FILE = OMDB/Info.plist;
+				DEVELOPMENT_TEAM = SZSQ274898;
+				INFOPLIST_FILE = "$(SRCROOT)/OMDB/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.OMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -687,8 +769,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BD3S4TTCB;
-				INFOPLIST_FILE = OMDB/Info.plist;
+				DEVELOPMENT_TEAM = SZSQ274898;
+				INFOPLIST_FILE = "$(SRCROOT)/OMDB/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.OMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";

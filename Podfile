@@ -7,6 +7,9 @@ target 'OMDB' do
 
   # Pods for OMDB
 	pod 'Moya'
+    
+  # Pods for SwiftyJSON
+    pod 'SwiftyJSON'
 	
   target 'OMDBTests' do
     inherit! :search_paths
