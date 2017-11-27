@@ -17,6 +17,12 @@
 		5B12BC7E1F840D7300908D3A /* OMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12BC7D1F840D7300908D3A /* OMDBTests.swift */; };
 		5B12BC891F840D7400908D3A /* OMDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12BC881F840D7400908D3A /* OMDBUITests.swift */; };
 		90B0EF20ADEABFB30671BE9D /* Pods_OMDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF9881595AF392A8A7C82B /* Pods_OMDBTests.framework */; };
+		FDD8D4291FCC7DA500BA4C39 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8D4271FCC7DA500BA4C39 /* ServiceError.swift */; };
+		FDD8D42A1FCC7DA500BA4C39 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8D4281FCC7DA500BA4C39 /* Weather.swift */; };
+		FDD8D42C1FCC7DAE00BA4C39 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8D42B1FCC7DAE00BA4C39 /* WeatherService.swift */; };
+		FDD8D4301FCC7DC000BA4C39 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD8D42D1FCC7DC000BA4C39 /* Search.storyboard */; };
+		FDD8D4311FCC7DC000BA4C39 /* WeatherServicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8D42E1FCC7DC000BA4C39 /* WeatherServicePresenter.swift */; };
+		FDD8D4321FCC7DC000BA4C39 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8D42F1FCC7DC000BA4C39 /* ChooseCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		D69A44AF8B0CEE959B0AAD7A /* Pods_OMDBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD4DFDE54E015BFD6E2881C /* Pods-OMDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDBTests/Pods-OMDBTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED7AD6A587CB4841FA06E900 /* Pods-OMDBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMDBUITests/Pods-OMDBUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FDD8D4271FCC7DA500BA4C39 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		FDD8D4281FCC7DA500BA4C39 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FDD8D42B1FCC7DAE00BA4C39 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		FDD8D42D1FCC7DC000BA4C39 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		FDD8D42E1FCC7DC000BA4C39 /* WeatherServicePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherServicePresenter.swift; sourceTree = "<group>"; };
+		FDD8D42F1FCC7DC000BA4C39 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +182,8 @@
 		5B12BC981F840F5300908D3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDD8D4271FCC7DA500BA4C39 /* ServiceError.swift */,
+				FDD8D4281FCC7DA500BA4C39 /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +191,7 @@
 		5B12BC991F840F5A00908D3A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FDD8D42B1FCC7DAE00BA4C39 /* WeatherService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -184,6 +199,9 @@
 		5B12BC9A1F840F6500908D3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDD8D42F1FCC7DC000BA4C39 /* ChooseCityViewController.swift */,
+				FDD8D42D1FCC7DC000BA4C39 /* Search.storyboard */,
+				FDD8D42E1FCC7DC000BA4C39 /* WeatherServicePresenter.swift */,
 				5B12BC711F840D7200908D3A /* LaunchScreen.storyboard */,
 				5B12BC6C1F840D7200908D3A /* Main.storyboard */,
 				5B12BC6A1F840D7200908D3A /* ViewController.swift */,
@@ -339,6 +357,7 @@
 			files = (
 				5B12BC731F840D7200908D3A /* LaunchScreen.storyboard in Resources */,
 				5B12BC701F840D7200908D3A /* Assets.xcassets in Resources */,
+				FDD8D4301FCC7DC000BA4C39 /* Search.storyboard in Resources */,
 				5B12BC6E1F840D7200908D3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,13 +400,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDBUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		888D3DA2CB93A3DCEBF0F591 /* [CP] Copy Pods Resources */ = {
@@ -441,13 +463,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDB-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF71A16F9E0B97A8C6C39222 /* [CP] Embed Pods Frameworks */ = {
@@ -456,9 +481,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OMDB/Pods-OMDB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,13 +503,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDBTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FADE0790952F501763990C6E /* [CP] Copy Pods Resources */ = {
@@ -502,7 +537,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD8D42C1FCC7DAE00BA4C39 /* WeatherService.swift in Sources */,
+				FDD8D42A1FCC7DA500BA4C39 /* Weather.swift in Sources */,
+				FDD8D4291FCC7DA500BA4C39 /* ServiceError.swift in Sources */,
+				FDD8D4311FCC7DC000BA4C39 /* WeatherServicePresenter.swift in Sources */,
 				5B12BC6B1F840D7200908D3A /* ViewController.swift in Sources */,
+				FDD8D4321FCC7DC000BA4C39 /* ChooseCityViewController.swift in Sources */,
 				5B12BC691F840D7100908D3A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

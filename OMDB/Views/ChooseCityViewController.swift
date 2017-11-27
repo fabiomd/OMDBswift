@@ -17,13 +17,11 @@ class ChooseCityViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var presenter: WeatherServicePresenter!
+    private var presenter: WeatherServicePresenter = WeatherServicePresenter()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-          presenter = WeatherServicePresenter()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,18 +32,8 @@ class ChooseCityViewController: UIViewController {
 }
 
 extension ChooseCityViewController: WeatherServicePresenterDelegate {
-    func updateView(presenter: WeatherServicePresenter) {
-        //
-    }
-    
-    func WeatherServicePresenter(presenter: WeatherServicePresenter, didUpdateViewModelWith viewModel: WeatherServicePresenter.ViewModel?) {
-        
-    }
-    
-    func WeatherServicePresenter(presenter: WeatherServicePresenter, didReceive weathers: Weather?) {
-        
-        cityLabel.text = weathers?.city
-        
+    func updateView(presenter: WeatherServicePresenter, updateViewModelWith viewModel: WeatherServicePresenter.ViewModel?) {
+//        cityLabel.text = weathers?.city
     }
 }
 

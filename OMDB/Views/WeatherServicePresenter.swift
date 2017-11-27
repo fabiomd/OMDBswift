@@ -10,8 +10,7 @@ import Foundation
 import Moya
 
 protocol WeatherServicePresenterDelegate: class {
-    func updateView(presenter: WeatherServicePresenter)
-    func WeatherServicePresenter(presenter: WeatherServicePresenter, didUpdateViewModelWith viewModel:WeatherServicePresenter.ViewModel?)
+    func updateView(presenter: WeatherServicePresenter, updateViewModelWith viewModel:WeatherServicePresenter.ViewModel?)
 }
 
 class WeatherServicePresenter {
@@ -30,8 +29,7 @@ class WeatherServicePresenter {
                     return
                 }
                 self.viewModel = WeatherServicePresenter.ViewModel(weathers: weather)
-                self.delegate?.updateView(presenter: self)
-                self.delegate?.WeatherServicePresenter(presenter: self, didUpdateViewModelWith: self.viewModel)
+				self.delegate?.updateView(presenter: self, updateViewModelWith: self.viewModel)
                 break
             case .failure(_):
                 break
