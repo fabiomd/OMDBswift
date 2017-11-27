@@ -24,7 +24,7 @@ extension WeatherService: TargetType{
     var path: String {
         switch self {
         case .weather():
-            return "/weather"
+            return ""
         }
     }
     
@@ -70,7 +70,7 @@ extension WeatherService: TargetType{
                         return
                     }
                     do {
-                        let responseObject = try JSONDecoder().decode(Weather.self, from: data)
+                        let responseObject = try JSONDecoder().decode(APIResults.self, from: data)
                         completion(.success(responseObject))
                         
                     } catch {

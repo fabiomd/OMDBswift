@@ -35,7 +35,10 @@ class ChooseCityViewController: UIViewController {
 
 extension ChooseCityViewController: WeatherServicePresenterDelegate {
     func updateView(presenter: WeatherServicePresenter, updateViewModelWith viewModel: WeatherServicePresenter.ViewModel?) {
-//        cityLabel.text = weathers?.city
+        cityLabel.text = viewModel?.weathers.name
+        tempLabel.text = String(format:"%.2f",(viewModel?.weathers.main.temp)!)
+        humidityLabel.text = String(format:"%.2f",(viewModel?.weathers.main.temp_max)!)
+        timeLabel.text = String(format:"%.2f",(viewModel?.weathers.main.temp_min)!)
     }
 }
 

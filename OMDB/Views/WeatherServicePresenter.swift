@@ -25,7 +25,7 @@ class WeatherServicePresenter {
         provider.request(teste, completion: weatherService.response(completion: { (result) in
             switch result {
             case .success(let weathers):
-                guard let weather = weathers as? Weather else {
+                guard let weather = weathers as? APIResults else {
                     return
                 }
                 self.viewModel = WeatherServicePresenter.ViewModel(weathers: weather)
@@ -40,6 +40,6 @@ class WeatherServicePresenter {
 
 extension WeatherServicePresenter {
     struct ViewModel {
-        var weathers: Weather
+        var weathers: APIResults
     }
 }
