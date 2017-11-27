@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct Weather: Codable{
+    var city: String?
+    var temp: String?
+    var humidity: String?
+    var temp_min: String?
+    var temp_max: String?
+    var country: String?
+    var time: String?
+}
