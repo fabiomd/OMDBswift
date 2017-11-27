@@ -7,20 +7,96 @@
 //
 
 import UIKit
+import Moya
 
-//class MovieService: NSObject {
-//
-//    func getMovie(movieurl : String, responseData : @escaping (Data) -> (), error : @escaping (Error) -> ()){
-//        guard let url = URL(string : movieurl) else {return}
-//        URLSession.shared.dataTask(with: url){
-//            (data , response, err) in
-//            if (err) != nil {
-//                error(err!)
-//            }else {
-//                guard let data = data else {return}
-//                responseData(data)
-//            }
-//        }.resume()
-//    }
-//}
+enum MovieRequest{
+    case recomendation(id:Int)
+    case topRated(page:Int)
+    case newMovies(page:Int)
+    case video(id:Int)
+}
+
+extension MovieRequest: TargetType{
+    
+    var baseURL: URL {
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/") else { fatalError("baseURL could not be configured") }
+        return url
+    }
+    
+    var path: String {
+        switch self {
+        case .recomendation(let id):
+            return "\(id)/recommendations"
+        case .topRated:
+            return "popular"
+        case .newMovies:
+            return "now_playing"
+        case .video(let id):
+            return "\(id)/videos"
+        }
+    }
+    
+    var method: Moya.Method {
+        switch self {
+        case .recomendation,
+             .topRated,
+             .newMovies,
+             .video:
+            return .get
+        }
+        
+    }
+    
+    var sampleData: Data {
+        switch self {
+        case .recomendation,
+             .topRated,
+             .newMovies,
+             .video:
+            guard let path = Bundle.main.path(forResource: "movies", ofType: "json") else { fatalError("path could not be found") }
+            return (try! Data(contentsOf: URL(fileURLWithPath: path)))
+        }
+    }
+    
+    var task: Task {
+        switch self {
+        case .recomendation,
+             .topRated,
+             .newMovies,
+             .video:
+            return .requestPlain
+        }
+    }
+    
+    var headers: [String : String]? {
+        return nil
+    }
+    
+    var parameters: [String : Any]? {
+        switch self {
+        case .recomendation,
+             .video:
+            return [
+                "api_key": APIEntity.apiKey
+            ]
+        case .topRated(let page),
+             .newMovies(let page):
+            return [
+                "page": page,
+                "api_key": APIEntity.apiKey
+            ]
+        }
+    }
+    
+    var parameterEncoding: ParameterEncoding {
+        switch self {
+        case .recomendation,
+             .topRated,
+             .newMovies,
+             .video:
+            return URLEncoding.queryString
+        }
+    }
+}
+
 

@@ -1,5 +1,5 @@
 //
-//  videoResults.swift
+//  VideoResultsModel.swift
 //  OMDB
 //
 //  Created by Fábio Moreira on 27/11/17.
@@ -9,13 +9,13 @@
 import UIKit
 import Foundation
 
-struct videoResults: Decodable {
-    let details: [VideoKey]
+struct videoResultsModel: Decodable {
+    let details: [VideoKeyModel]
     private enum CodingKeys: String, CodingKey {
         case details = "results"
     }
 }
 
-struct VideoKey: Decodable {
+struct VideoKeyModel: Decodable {
     let key: String
 }

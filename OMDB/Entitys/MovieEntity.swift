@@ -1,19 +1,18 @@
 //
-//  Movie.swift
+//  MovieEntity.swift
 //  OMDB
 //
-//  Created by Fábio Moreira on 21/11/17.
+//  Created by Fábio Moreira on 27/11/17.
 //  Copyright © 2017 Rodrigo. All rights reserved.
 //
 
 import UIKit
 
-class Movie2: Decodable {
-    
-    let vote_count : Int,
-        id : String,
+class MovieEntity: Decodable {
+    let voteCount :Int,
+        id : Int,
         video : Bool,
-        vote_average : Float,
+        vote_average : Int,
         title : String,
         popularity : Float,
         poster_path : String,
