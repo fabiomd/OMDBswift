@@ -23,6 +23,7 @@
 		FDD8D4301FCC7DC000BA4C39 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD8D42D1FCC7DC000BA4C39 /* Search.storyboard */; };
 		FDD8D4311FCC7DC000BA4C39 /* WeatherServicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8D42E1FCC7DC000BA4C39 /* WeatherServicePresenter.swift */; };
 		FDD8D4321FCC7DC000BA4C39 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8D42F1FCC7DC000BA4C39 /* ChooseCityViewController.swift */; };
+		FDD8D4341FCC833900BA4C39 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD8D4331FCC833900BA4C39 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 		5B12BC6D1F840D7200908D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B12BC6F1F840D7200908D3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B12BC721F840D7200908D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5B12BC741F840D7200908D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B12BC791F840D7300908D3A /* OMDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OMDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B12BC7D1F840D7300908D3A /* OMDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBTests.swift; sourceTree = "<group>"; };
 		5B12BC7F1F840D7400908D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +71,7 @@
 		FDD8D42D1FCC7DC000BA4C39 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		FDD8D42E1FCC7DC000BA4C39 /* WeatherServicePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherServicePresenter.swift; sourceTree = "<group>"; };
 		FDD8D42F1FCC7DC000BA4C39 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
+		FDD8D4331FCC833900BA4C39 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = OMDB/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +221,7 @@
 		5B12BC9C1F840F7B00908D3A /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				5B12BC741F840D7200908D3A /* Info.plist */,
+				FDD8D4331FCC833900BA4C39 /* Info.plist */,
 				5B12BC681F840D7100908D3A /* AppDelegate.swift */,
 			);
 			path = Application;
@@ -358,6 +359,7 @@
 				5B12BC731F840D7200908D3A /* LaunchScreen.storyboard in Resources */,
 				5B12BC701F840D7200908D3A /* Assets.xcassets in Resources */,
 				FDD8D4301FCC7DC000BA4C39 /* Search.storyboard in Resources */,
+				FDD8D4341FCC833900BA4C39 /* Info.plist in Resources */,
 				5B12BC6E1F840D7200908D3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

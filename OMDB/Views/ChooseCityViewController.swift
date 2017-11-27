@@ -22,6 +22,8 @@ class ChooseCityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		presenter.delegate = self
+		presenter.loadData()
     }
 
     override func didReceiveMemoryWarning() {
