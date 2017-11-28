@@ -9,14 +9,14 @@
 import UIKit
 import Moya
 
-enum MovieRequest{
+enum MovieService{
     case recomendation(id:Int)
     case topRated(page:Int)
     case newMovies(page:Int)
     case video(id:Int)
 }
 
-extension MovieRequest: TargetType{
+extension MovieService: TargetType{
     
     var baseURL: URL {
         guard let url = URL(string: "https://api.themoviedb.org/3/movie/") else { fatalError("baseURL could not be configured") }
@@ -64,7 +64,8 @@ extension MovieRequest: TargetType{
              .topRated,
              .newMovies,
              .video:
-            return .requestPlain
+//            return .requestPlain
+            return .requestParameters(parameters: parameters!, encoding: parameterEncoding)
         }
     }
     
@@ -98,5 +99,6 @@ extension MovieRequest: TargetType{
         }
     }
 }
+
 
 

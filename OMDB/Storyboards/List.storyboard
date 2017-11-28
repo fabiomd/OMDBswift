@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gsg-qI-sKR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Presenter View Controller-->
+        <scene sceneID="F53-Xc-8mf">
+            <objects>
+                <viewController id="gsg-qI-sKR" customClass="ListPresenterViewController" customModule="OMDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jdz-RD-DRu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gtF-SN-MYp" customClass="TopRatedView" customModule="OMDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QBI-wc-RXf">
+                                    <size key="itemSize" width="355" height="247"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topRatedCell" id="QdY-u4-BMW" customClass="ListEntityCollectionViewCell" customModule="OMDB" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="247"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="247"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHO-DD-e9t">
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="247"/>
+                                                    <color key="backgroundColor" red="1" green="0.020532956710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dwb-rM-Ubg">
+                                                        <size key="itemSize" width="151" height="245"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uVD-11-KUP" customClass="SubListEntityCollectionViewCell" customModule="OMDB" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="1" width="151" height="245"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="151" height="245"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </view>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ZHO-DD-e9t" secondAttribute="bottom" id="AWC-Ry-cT9"/>
+                                            <constraint firstItem="ZHO-DD-e9t" firstAttribute="leading" secondItem="QdY-u4-BMW" secondAttribute="leading" id="DWb-Rb-szW"/>
+                                            <constraint firstItem="ZHO-DD-e9t" firstAttribute="top" secondItem="QdY-u4-BMW" secondAttribute="top" id="dlB-sO-zMA"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZHO-DD-e9t" secondAttribute="trailing" id="oAE-ll-fLA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="collectionView" destination="ZHO-DD-e9t" id="1LJ-aM-BH1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PXc-cE-c6q" firstAttribute="bottom" secondItem="gtF-SN-MYp" secondAttribute="bottom" id="3qy-9F-eLX"/>
+                            <constraint firstItem="gtF-SN-MYp" firstAttribute="top" secondItem="Jdz-RD-DRu" secondAttribute="top" id="CPf-jb-jXu"/>
+                            <constraint firstItem="gtF-SN-MYp" firstAttribute="trailing" secondItem="PXc-cE-c6q" secondAttribute="trailing" id="FCb-hE-P9L"/>
+                            <constraint firstItem="gtF-SN-MYp" firstAttribute="leading" secondItem="PXc-cE-c6q" secondAttribute="leading" id="nPT-ET-WL8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PXc-cE-c6q"/>
+                    </view>
+                    <connections>
+                        <outlet property="topRatedView" destination="gtF-SN-MYp" id="wGK-KJ-C7P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ML9-PR-Oan" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.399999999999999" y="99.400299850074973"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,7 +10,7 @@ import UIKit
 
 import UIKit
 
-struct MovieResults: Decodable  {
+struct MovieResultsModel: Decodable  {
     let page: Int
     let total_results: Int
     let total_pages: Int
