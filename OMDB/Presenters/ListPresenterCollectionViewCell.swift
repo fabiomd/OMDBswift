@@ -12,13 +12,14 @@ class ListPresenterCollectionViewCell: UICollectionViewCell {
     
     var subList : Array<MovieEntity> = []
     let cellIdentifier = "subListIdentifier"
-//    var cell : ListEntityCollectionViewCell
     
     @IBOutlet weak var tittle: UILabel!
     @IBOutlet weak var subtittle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     func fillCell(movies: Array<MovieEntity>, tittle: String, subtittle : String){
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         self.tittle.text = tittle
         self.subtittle.text = subtittle
         self.subList = movies
@@ -28,7 +29,7 @@ class ListPresenterCollectionViewCell: UICollectionViewCell {
 
 extension ListPresenterCollectionViewCell : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return subList.count
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
