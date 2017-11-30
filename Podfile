@@ -24,4 +24,6 @@ target 'OMDB' do
     # Pods for testing
   end
 
+  pod 'SwiftOverlays', '~> 4.0.0'
+
 end

@@ -6,11 +6,11 @@
 //  Copyright © 2017 Rodrigo. All rights reserved.
 
 import UIKit
+import SwiftOverlays
 
 
 class ListPresenterViewController: UIViewController  {
     @IBOutlet weak var dateView: UILabel!
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     let listTopRatedInteractor = ListTopRatedInteractor()
     let listNewMovieInteractor = ListNewMovieInteractor()
@@ -28,7 +28,7 @@ class ListPresenterViewController: UIViewController  {
         self.dateView.text = dateInteractor.today()
         let taskGroup = DispatchGroup()
         taskGroup.enter()
-        self.loadingIndicator.isHidden = false
+        self.showWaitOverlay()
         listTopRatedInteractor .getTopRated(page: 1, completion: { (Movies) in
             self.topRatedItems = Movies
             taskGroup.leave()
@@ -43,8 +43,8 @@ class ListPresenterViewController: UIViewController  {
         })
         
         taskGroup.notify(queue: DispatchQueue.main, work: DispatchWorkItem(block: {
+            self.removeAllOverlays()
             self.topRatedView.reloadData()
-            self.loadingIndicator.isHidden = true
         }))
     }
 
@@ -101,12 +101,12 @@ extension ListPresenterViewController : UICollectionViewDataSource, UICollection
 
 extension ListPresenterViewController : UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.loadingIndicator.isHidden = false
+        self.showWaitOverlay()
         if((searchBar.text) != nil){
             listSearchInteractor .getResultFromSearch(text: searchBar.text!,page: 1, completion: { (Movies) in
                 self.searchResults = Movies
+                self.removeAllOverlays()
                 self.topRatedView.reloadData()
-                self.loadingIndicator.isHidden = true
             })
         }
     }
