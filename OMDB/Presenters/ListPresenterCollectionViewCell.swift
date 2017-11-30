@@ -12,6 +12,7 @@ class ListPresenterCollectionViewCell: UICollectionViewCell {
     
     var subList : Array<MovieEntity> = []
     let cellIdentifier = "subListIdentifier"
+    var cv : ListPresenterViewController?
     
     @IBOutlet weak var tittle: UILabel!
     @IBOutlet weak var subtittle: UILabel!
@@ -25,16 +26,26 @@ class ListPresenterCollectionViewCell: UICollectionViewCell {
         self.subList = movies
         self.collectionView.reloadData()
     }
+    
 }
 
 extension ListPresenterCollectionViewCell : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return subList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! SubListPresenterCollectionViewCell
         cell.fillCell(movie: self.subList[indexPath.row])
         return cell
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        if(indexPath.row == self.subList.count)
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath)
+        cv?.performSegue(withIdentifier: "movedetails", sender: self.subList[indexPath.row])
     }
 }

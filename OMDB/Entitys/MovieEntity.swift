@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieEntity: Codable {
     let vote_count :Int?,
@@ -23,5 +24,13 @@ class MovieEntity: Codable {
         adult : Bool?,
         overview : String?,
         release_date : String?
+    
+//    func downloadImage(){
+//        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(String(describing: self.poster_path))")  else { return }
+//        ImageDownloader.default.downloadImage(with: url, options: [], progressBlock: nil) {
+//            (image, error, url, data) in
+//            return image
+//        }
+//    }
 }
 
