@@ -20,7 +20,8 @@ class SubListPresenterCollectionViewCell: UICollectionViewCell {
     
     func updateUI(movie : MovieEntity){
         self.movie = movie
-        let path = "https://image.tmdb.org/t/p/w500" + movie.poster_path!
+        guard let moviePosterPath = movie.poster_path else { return}
+        let path = "https://image.tmdb.org/t/p/w500" + moviePosterPath
         let url = URL(string: path)
         let resource = ImageResource(downloadURL: url!, cacheKey: movie.title)
         image.kf.setImage(with: resource, placeholder: #imageLiteral(resourceName: "placer"), options: [.transition(.fade(0.3))])

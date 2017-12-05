@@ -12,6 +12,7 @@ import Kingfisher
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var voteAverage: UILabel!
     @IBOutlet weak var overviewView: UIView!
     @IBOutlet weak var overviewTextView: UITextView!
     @IBOutlet weak var year: UILabel!
@@ -25,6 +26,7 @@ class DetailsViewController: UIViewController {
             self.updateUI()
             self.year.text = movie?.release_date
             self.tittle.text = movie?.original_title
+            self.voteAverage.text = NSString(format: "%.1f", (movie?.vote_average)!) as String
             self.overviewTextView.text = movie?.overview
         }
         // Do any additional setup after loading the view.

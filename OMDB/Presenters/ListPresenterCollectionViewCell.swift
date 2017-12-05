@@ -12,18 +12,20 @@ class ListPresenterCollectionViewCell: UICollectionViewCell {
     
     var subList : Array<MovieEntity> = []
     let cellIdentifier = "subListIdentifier"
+    var superCellIdentifier : String?
     var cv : ListPresenterViewController?
     
     @IBOutlet weak var tittle: UILabel!
     @IBOutlet weak var subtittle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    func fillCell(movies: Array<MovieEntity>, tittle: String, subtittle : String){
+    func fillCell(movies: Array<MovieEntity>, tittle: String, subtittle : String, cellID : String){
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.tittle.text = tittle
         self.subtittle.text = subtittle
         self.subList = movies
+        self.superCellIdentifier = cellID
         self.collectionView.reloadData()
     }
     
@@ -40,12 +42,13 @@ extension ListPresenterCollectionViewCell : UICollectionViewDataSource, UICollec
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        if(indexPath.row == self.subList.count)
-//    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if(indexPath.row == self.subList.count - 1){
+            self.cv?.getMoreElements(cellID: self.superCellIdentifier!)
+        }
+    }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.cellForItem(at: indexPath)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         cv?.performSegue(withIdentifier: "movedetails", sender: self.subList[indexPath.row])
     }
 }
